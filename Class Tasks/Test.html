@@ -10,12 +10,14 @@
    <div class="container"></div>
    <div class="container"></div>
    <script>
-       document.getElementById("byid").innerText="Hai getelementByID";
-       document.getElementById("byid").style.color="red";
-       let Res=document.getElementsByClassName("container");
-       Res[0].innerHTML="Hi"
-       Res[0].style.color="red"
-       document.getElementsByClassName("container")[1].innerText="Second container"
+       document.querySelector("#byid").innerHTML="queryElement"
+       document.querySelectorAll(".container")[0].innerHTML="All Elements"
+    //    document.getElementById("byid").innerText="Hai getelementByID";
+    //    document.getElementById("byid").style.color="red";
+    //    let Res=document.getElementsByClassName("container");
+    //    Res[0].innerHTML="Hi"
+    //    Res[0].style.color="red"
+    //    document.getElementsByClassName("container")[1].innerText="Second container"
    </script>
 </body>
 </html>
