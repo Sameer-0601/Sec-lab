@@ -3,65 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Stopwatch</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        #stopwatch {
-            text-align: center;
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-
-<div id="stopwatch">00:00:000</div>
-<button id="startBtn">Start</button>
-<button id="stopBtn">Stop</button>
-<button id="resetBtn">Reset</button>
-
-<script>
-    let timer;
-    let milliseconds = 0;
-
-    function updateStopwatch() {
-        milliseconds += 100; // Increment by 100ms
-        const minutes = Math.floor(milliseconds / 60000);
-        const secs = Math.floor((milliseconds % 60000) / 1000);
-        const ms = milliseconds % 1000;
-        document.getElementById('stopwatch').textContent = 
-            String(minutes).padStart(2, '0') + ':' + 
-            String(secs).padStart(2, '0') + '.' + 
-            String(ms).padStart(3, '0');
-    }
-
-    document.getElementById('startBtn').addEventListener('click', () => {
-        clearInterval(timer);
-        timer = setInterval(updateStopwatch, 100); // Update every 100ms
-    });
-
-    document.getElementById('stopBtn').addEventListener('click', () => {
-        clearInterval(timer);
-    });
-
-    document.getElementById('resetBtn').addEventListener('click', () => {
-        clearInterval(timer);
-        milliseconds = 0;
-        document.getElementById('stopwatch').textContent = '00:00.000';
-    });
-</script>
-
+   <div id="byid"></div> 
+   <div class="container"></div>
+   <div class="container"></div>
+   <script>
+       document.getElementById("byid").innerText="Hai getelementByID";
+       document.getElementById("byid").style.color="red";
+       let Res=document.getElementsByClassName("container");
+       Res[0].innerHTML="Hi"
+       Res[0].style.color="red"
+       document.getElementsByClassName("container")[1].innerText="Second container"
+   </script>
 </body>
 </html>
