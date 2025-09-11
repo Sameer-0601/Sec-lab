@@ -13,11 +13,11 @@
     <button onclick="Reset()">Reset</button>
 
     <script>
-        let seconds=00; // Start the timer
+        let seconds=0; // Start the timer
         let intervalId=null;  // Stores the timer values
         function updateDisplay(){
-            let minutes=String(Math.floor(seconds/60)).padStart(2,'0');
-            let secs=String(seconds%60).padStart(2,'0');
+            let minutes=String(Math.floor(seconds/60)).padStart(2,'00');
+            let secs=String(seconds%60).padStart(2,'00');
             document.getElementById("display").innerText=`${minutes}:${seconds}`;
         }
 
